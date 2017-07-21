@@ -1,0 +1,77 @@
+ <div class="col-md-6 col-md-offset-3">
+  <h2>Add Student</h2>
+  <div class="col-md-6 col-md-offset-3">
+</div>
+    <div class="panel-body">
+        <form name="form" role="form" (ngSubmit)="AddStudent(f)" #f="ngForm">
+            <label for="firstName" class="control-label">Fullname:</label>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" 
+					id="firstName"
+					 placeholder="First name"
+					  pattern=".{3,}"
+					   name="firstname" ngModel required/>
+                </div>
+                
+                 <div class="col-md-6">
+                    <input type="text" class="form-control" 
+					id="lastName"
+					 placeholder="Last name"
+					  pattern=".{3,}"
+					  
+					   name="lastname" ngModel/>
+                </div>
+            </div>
+            <label for="userName" class="control-label"> Username:</label>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" 
+					id="username" 
+					placeholder="e.g:-Shanu"
+					name="username"
+					 pattern=".{3,}" 
+					 ngModel required />
+                </div>
+            </div>
+             <label for="email" class="control-label"> Email:</label>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" 
+					id="email" 
+					placeholder="e.g:-abc@abc.com" 
+					name="email" 
+					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+					ngModel required/>
+                </div>
+            </div>
+           
+ <div class="row">
+	<div class="col-lg-6">
+		<div class="form-group">
+			<label for="password" class="label-control">Password</label> 
+			<input type="password" class="form-control" name="password" pattern=".{6,}" placeholder="Min 6 characters" ngModel> 
+		</div>
+	</div>	
+ </div>
+	
+
+	<div class="row">	
+  <div class="row">
+	<div class="col-lg-5 col-lg-offset-5">
+	<button class="btn btn-primary" [disabled]="!f.valid" type="submit" click="onSubmit()">Submit</button>	
+	</div>
+	
+	</div>	
+
+	
+           
+           
+	</div>
+                
+                
+                </form>
+    </div>      
+
+
+ </div>
